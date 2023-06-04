@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Pangolin&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+<body>
+  
+  <button id="mode" class="toggle"></button>
+
+  <div class="container" id="contain">
+    <div class="header">
+        <div class="search-box">
+            <input  id="inputbox" type="text" placeholder="Enter your location">
+
+            <button id="searchbtn">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+            </button>
+        </div>
+    </div>
+
+      <div id="no_location">
+        <h2>Sorry, Loctaion not found!!</h2>
+        <img src="./assets/not-found.png" alt="">
+      </div>
+
+    <div id="weather_body">
+    <img src="./assets/sun.png" alt="" id="weather_img">
+
+    <div class="weather-box">
+    <p id="temperature">0 <sup>°C</sup></p>
+    <p id="details">Sunny</p>
+    </div>
+
+    <div class="weather-details">
+      <div class="humidity">
+        <img src="./assets/humidity.png" alt="">
+        <div class="text">
+          <span id="humidity">45%</span>
+          <p>Humidity</p>
+        </div>
+      </div>
+
+      <div class="wind">
+        <img src="./assets/wind.png" alt="">
+        <div class="text">
+          <span id="wind_speed">12Km/h</span>
+          <p>Wind Speed</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="weather-details">
+      <div class="pressure">
+        <img src="./assets/pressure-gauge.png"alt="">
+        <div class="text">
+          <span id="pressure">12</span>
+          <p>Pressure</p>
+        </div>
+      </div>
+
+      <div class="visibility">
+        <img src="./assets/visibility.png"alt="">
+        <div class="text">
+          <span id="visibility">1000</span>
+          <p>Visibility</p>
+        </div>
+      </div>
+
+</div>
+
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

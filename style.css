@@ -1,0 +1,241 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: lightblue;
+    height: 100%;
+    width: auto;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    padding: 17px 0px;
+    margin: 20px;
+    height: auto;
+    width: auto;
+    border-radius: 12px;
+    background-color: white;
+    align-items: center;
+}
+
+.search-box {
+    /* border: 2px solid black; */
+    border-radius: 9px;
+    width: fit-content;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input::placeholder {
+    color: black;
+}
+
+.search-box input {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(217, 233, 238);
+    border-radius: 12px;
+    font-size: 20px;
+    text-transform: capitalize;
+    /*Pahla letter capital ho jayega*/
+    margin: 2px 12px;
+    padding: 10px;
+    width: 404px;
+}
+
+
+.search-box button {
+    border-radius: 50%;
+    background-color: rgb(217, 233, 238);
+    /* border: 2px solid brown; */
+    padding: 16px;
+}
+
+.search-box button:hover {
+    cursor: pointer;
+    background-color: #aba7a7;
+}
+
+#weather_body {
+    display: none;
+    flex-wrap: wrap;
+}
+
+#weather_body #weather_img {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+}
+
+.weather-box {
+    padding: 12px 5px;
+}
+
+.weather-box #temperature {
+    font-family: sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    display: block;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.weather-box #temperature sup {
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+}
+
+.weather-box #details {
+    font-size: 27px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.weather-details img {
+    width: 25px;
+    margin: 10px;
+}
+
+.humidity,
+.wind,
+.pressure,
+.visibility {
+    display: flex;
+    align-items: center;
+}
+
+.wind,
+.visibility {
+    margin-right: 13px;
+}
+
+.humidity,
+.pressure {
+    margin-left: 2px;
+}
+
+.text {
+    font-size: 17px;
+}
+
+#humidity,
+#wind_speed,
+#pressure,
+#visibility {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.visibility {
+    margin-right: 34px;
+}
+
+#no_location {
+    display: none;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#no_location h2 {
+    margin: 12px 0px;
+    color: #aba7a7;
+}
+
+#no_location img {
+    width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        width: 93%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .search-box input {
+        width: 200px;
+    }
+
+    .container {
+        margin: auto;
+    }
+
+    .search-box {
+        margin: auto;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.grey {
+    background-color: #3d3d3d;
+}
+
+
+.toggle {
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    height: 50px;
+    width: 120px;
+    background-color:#b7b8b9;
+    border-radius: 90px;
+    box-shadow: 0px 5px 15px black;
+    cursor: pointer;
+}
+
+.toggle::after{
+    content: " ";
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5px;
+    left: 3px;
+    background: linear-gradient(180deg,rgb(248, 190, 83),rgb(218, 142, 1));
+    transition: 0.5s;
+}
+
+.white{
+    background-color: rgb(78, 77, 77);
+    box-shadow: 0px 5px 15px rgb(179, 177, 177);
+}
+
+.white::after{
+    content: url(./assets/icons8-moon-man-40.png);
+    overflow: hidden;
+    background: white;
+    transform: translateX(153%);
+    transition: 0.5s;
+}
